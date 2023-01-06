@@ -12,8 +12,6 @@ class ItemScreen extends StatefulWidget {
 class _ItemScreenState extends State<ItemScreen> {
   @override
   Widget build(BuildContext context) {
-    print(widget.itemName);
-    print(widget.itemImage);
     return Scaffold(
       // appBar: AppBar(),
       body: SafeArea(
@@ -25,8 +23,8 @@ class _ItemScreenState extends State<ItemScreen> {
                   height: MediaQuery.of(context).size.height / 2.25,
                   width: MediaQuery.of(context).size.width,
                   decoration: const BoxDecoration(
-                    // color: Color(0xfff1f1f1),
-                    color: Colors.red,
+                    color: Color(0xfff1f1f1),
+                    // color: Colors.red,
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(100.0),
                       bottomRight: Radius.circular(100.0),
@@ -38,7 +36,7 @@ class _ItemScreenState extends State<ItemScreen> {
                       Center(
                         child: Container(
                           child: Image(
-                            image: AssetImage(widget.itemImage),
+                            image: AssetImage("assets/${widget.itemImage}"),
                           ),
                         ),
                       ),
